@@ -12,7 +12,7 @@ public class DoubleJumpState : IPlayerState
     {
         Debug.Log("Entering State: Double Jumping");
         rbPlayer = player.GetComponent<Rigidbody>();
-        rbPlayer.AddForce(0, 400 * Time.deltaTime, 0, ForceMode.VelocityChange);
+        rbPlayer.AddForce(0, 600 * Time.deltaTime, 0, ForceMode.VelocityChange);
         player.mCurrentState = this;
     }
 
@@ -20,7 +20,7 @@ public class DoubleJumpState : IPlayerState
     {
         Debug.Log("Executing State: Double Jumping");
         if (Input.GetKeyDown(KeyCode.Z)) {
-            rbPlayer.AddForce(0, 400 * Time.deltaTime, 0, ForceMode.VelocityChange);
+            rbPlayer.AddForce(0, 600 * Time.deltaTime, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey(KeyCode.D)) {
             DivingPlayerState diveState = new DivingPlayerState();

@@ -12,7 +12,7 @@ public class JumpingPlayerState : IPlayerState
     {
         Debug.Log("Entering State: Jumping");
         rbPlayer = player.GetComponent<Rigidbody>();
-        rbPlayer.AddForce(0, 400 * Time.deltaTime, 0, ForceMode.VelocityChange);
+        rbPlayer.AddForce(0, 800 * Time.deltaTime, 0, ForceMode.VelocityChange);
         player.mCurrentState = this;
     }
 
